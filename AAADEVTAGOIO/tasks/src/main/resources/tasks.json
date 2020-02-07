@@ -1,0 +1,249 @@
+﻿{
+  "name": "My Tasks-from-service.AAADEVTAGOIO",
+  "categories":
+[
+  {
+        "name": "TagoIO",
+        "mTypes": 
+         [
+            {
+                "name": "TagoIO Read Data",
+                "snapinVersion": "3.0",
+		        "displayName": "TagoIO Read Data",
+                "tag": "TAGOIO",
+                "svg": "hello",
+                "helpUrl": "TagoInfo.html",
+                "tile": "gold",
+                "serviceName": "CollabDesigner",
+                "custom": "true",
+                "nodeType": "activity",
+                "modelClass": "service.AAADEVTAGOIO.TagoModel",
+                "executionClass": "service.AAADEVTAGOIO.TagoExecution",
+		"mapping": "[\"input\", \"output\"]",
+                "properties": [
+                    {   "name": "deviceToken",
+                        "displayPropName": "Device Token",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "deviceToken",
+                        "modelName": "setDeviceToken"
+                    },
+                    {
+                        "name": "variable",
+                        "displayPropName": "Variable",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "variable",
+                        "modelName": "setVariable"
+                    },
+                    {
+                        "name": "serie",
+                        "displayPropName": "Serie (Optional)",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "serie",
+                        "modelName": "setSerie"
+                    }
+                ],
+	        "input_schema": "{
+			        title: InputSchema,
+			        type: object,
+			        properties: {
+			            deviceToken: {
+			                type: string
+                        },
+                        variable: {
+			                type: string
+                        },
+                        serie: {
+			                type: string
+                        }
+			        }
+	        }",
+                "output_schema": "{
+                        title: OutputSchema,
+                        type: object,
+                        properties: {
+                            variable: {
+                                type: string
+                            },
+                            unit: {
+                                type: string
+                            },
+                            value: {
+                                type: string
+                            },
+                            latitude: {
+                                type: string
+                            },
+                            longitude: {
+                                type: string
+                            },
+                            type: {
+                                type: string
+                            },
+                            serie: {
+                                type: string
+                            },
+                            time: {
+                                type: string
+                            }
+                        }
+                }"
+            },{
+                "name": "TagoIO Write Data",
+                "snapinVersion": "3.0",
+		        "displayName": "TagoIO Write Data",
+                "tag": "TAGOIOSET",
+                "svg": "hello",
+                "helpUrl": "TagoSet.html",
+                "tile": "gold",
+                "serviceName": "CollabDesigner",
+                "custom": "true",
+                "nodeType": "activity",
+                "modelClass": "service.AAADEVTAGOIO.TagoModelSet",
+                "executionClass": "service.AAADEVTAGOIO.TagoExecutionSet",
+		"mapping": "[\"input\", \"output\"]",
+                "properties": [
+                    {   "name": "deviceToken",
+                        "displayPropName": "Device Token",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "deviceToken",
+                        "modelName": "setDeviceToken"
+                    },
+                    {
+                        "name": "variable",
+                        "displayPropName": "Variable",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "variable",
+                        "modelName": "setVariable"
+                    },
+                    {
+                        "name": "value",
+                        "displayPropName": "Value",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "value",
+                        "modelName": "setValue"
+                    },
+                    {
+                        "name": "serie",
+                        "displayPropName": "Serie (Optional)",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "serie",
+                        "modelName": "setSerie"
+                    }
+                ],
+	        "input_schema": "{
+			        title: InputSchema,
+			        type: object,
+			        properties: {
+			            deviceToken: {
+			                type: string
+                        },
+                        variable: {
+			                type: string
+                        },
+                        value: {
+			                type: string
+			            },
+                        serie: {
+			                type: string
+                        }
+			        }
+	        }",
+                "output_schema": "{
+                        title: OutputSchema,
+                        type: object,
+                        properties: {
+                            status: {
+                                type: string
+                            },
+                            result: {
+                                type: string
+                            }
+                        }
+                }"
+            },{
+                "name": "TagoIO Get Shared People",
+                "snapinVersion": "3.0",
+		        "displayName": "TagoIO Shared People",
+                "tag": "TAGOIOSharedPeople",
+                "svg": "hello",
+                "helpUrl": "TagoInfo.html",
+                "tile": "blue",
+                "serviceName": "CollabDesigner",
+                "custom": "true",
+                "nodeType": "activity",
+                "modelClass": "service.AAADEVTAGOIO.Shared.TagoIOSharedModel",
+                "executionClass": "service.AAADEVTAGOIO.Shared.TagoIOSharedExcecution",
+		"mapping": "[\"input\", \"output\"]",
+                "properties": [
+                    {   "name": "deviceTokenShared",
+                        "displayPropName": "Account Token",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "deviceTokenShared",
+                        "modelName": "setDeviceTokenShared"
+                    },
+                    {
+                        "name": "profileIdShared",
+                        "displayPropName": "Profile ID",
+                        "type": "String",
+                        "controlType": "text",
+                        "mapping": "profileIdShared",
+                        "modelName": "setProfileIdShared"
+                    }
+                ],
+	        "input_schema": "{
+			        title: InputSchema,
+			        type: object,
+			        properties: {
+			            setDeviceTokenShared: {
+			                type: string
+                        },
+                        profileIdShared: {
+			                type: string
+                        }
+			        }
+	        }",
+                "output_schema": "{
+                        title: OutputSchema,
+                        type: object,
+                        properties: {
+                            status: {
+                                type: string
+                            },
+                            code: {
+                                type: string
+                            },
+                            error: {
+                                type: string
+                            },
+                            result:{
+                                type : array,
+                                items : {
+                                    type : object,
+                                    properties : {
+                                        id: {
+                                            type: string
+                                        },
+                                        name: {
+                                            type: string
+                                        },
+                                        email: {
+                                            type: string
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                }"
+            }
+        ]
+  }
+]
+}

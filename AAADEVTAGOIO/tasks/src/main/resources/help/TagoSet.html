@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tago POST Info</title>
+</head>
+
+<body style="font-family: 'Times New Roman', Times, serif">
+    <h2 style="color:rgb(204, 0, 82)">Tago Post Info</h2>
+    <h4 style="font: bold">Description of the task</h4>
+    <p>Modify and / or include information to a device in Tago.</p>
+
+    <h4 style="font: bold">Properties of the task</h4>
+    <ul>
+        <li>Device Token - Token provided by Tago, one per device</li>
+        <li>Variable - The name of the variable from which you want to modify value, it is necessary to provide the name as it is indicated in the section of bucket in Tago
+        </li>
+        <li>Value - The new device value (String / Boolean / Numeric)</li>
+    </ul>
+    <h4 style="font: bold">Input schema</h4>
+    <ul>
+        <li>Device Token - Token provided by Tago, one per device</li>
+        <li>Variable - The name of the variable from which you want to modify value, it is necessary to provide the name as it is indicated in the section of bucket in Tago
+        </li>
+        <li>Value - The new device value (String / Boolean / Numeric)</li>
+    </ul>
+
+    <h4 style="font: bold">Output schema</h4>
+    <ul>
+        <li>Status - Current status of the transaction</li>
+        <li>Result - Number of devices affected by the transaction</li>
+    </ul>
+
+    <h4>Prerequisites</h4>
+    <p>Have an active account in Tago IO and have a device created. https://tago.io/</p>
+</body>
+
+</html>
